@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <odoo>
 <record id="reclamacio_action" model="ir.actions.act_window">
-<field name="name">Reclamacio</field>
+<field name="name">Reclamacions</field>
 <field name="res_model">reclamacio</field>
 <field name="view_mode">tree,form</field>
 </record>

@@ -6,8 +6,8 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <record id="view_reclamacio_form_inherit" model="ir.ui.view">
-        <field name="name">reclamacio.form.inherit</field>
+    <record id="view_reclamacio_form" model="ir.ui.view">
+        <field name="name">reclamacio.form</field>
         <field name="model">reclamacio</field>
         <field name="arch" type="xml">
             <form string="Reclamacions">
@@ -15,7 +15,6 @@
                     <h1>
                         <group>
                             <field name="name"/>
-                            
                         </group>
                     </h1>
                     <group>
@@ -23,10 +22,23 @@
                             <field name="client_id"></field>
                         </group>
                         <group>
-                            <field name="reason_for_closing"></field>
+                            <field name="creator_id"></field>
                         </group>
+                        <group>
+                            <field name="creation_date"></field>
+                        </group>
+                        <group>
+                            <field name="modification_date"></field>
+                        </group>
+                        <group>
+                            <field name="closing_date"></field>
+                        </group>
+                        <group>
+                            <field name="order_id"></field>
+                        </group>
+                
                         <notebook>
-                            <page string="descripcio">
+                            <page string="Descripció">
                                 <group>
                                     <field name="description"></field>
                                 </group>

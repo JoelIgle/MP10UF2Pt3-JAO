@@ -1,8 +1,40 @@
 <?xml version="1.0"?>
 <odoo>
-<record id="reclamacio_action" model="ir.actions.act_window">
-<field name="name">Reclamacions</field>
-<field name="res_model">reclamacio</field>
-<field name="view_mode">tree,form</field>
-</record>
+    <record id="reclamacio_action" model="ir.actions.act_window">
+        <field name="name">Reclamacions</field>
+        <field name="res_model">reclamacio</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_reclamacio_form_inherit" model="ir.ui.view">
+        <field name="name">reclamacio.form.inherit</field>
+        <field name="model">reclamacio</field>
+        <field name="arch" type="xml">
+            <form string="Reclamacions">
+                <sheet>
+                    <h1>
+                        <group>
+                            <field name="name"/>
+                            
+                        </group>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="client_id"></field>
+                        </group>
+                        <notebook>
+                            <page string="descripcio">
+                                <group>
+                                    <field name="description"></field>
+                                </group>
+                            </page>
+                        </notebook>
+
+                    </group>
+                </sheet>
+            </form>
+          
+        </field>
+    </record>
+
 </odoo>

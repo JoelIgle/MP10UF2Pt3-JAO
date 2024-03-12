@@ -15,15 +15,27 @@
                     <h1>
                         <group>
                             <field name="name"/>
-                            
                         </group>
                     </h1>
                     <group>
                         <group>
                             <field name="client_id"></field>
                         </group>
+                        <group>
+                            <field name="creator_id"></field>
+                        </group>
+                        <group>
+                            <field name="creation_date"></field>
+                        </group>
+                        <group>
+                            <field name="modification_date"></field>
+                        </group>
+                        <group>
+                            <field name="closing_date"></field>
+                        </group>
+                    
                         <notebook>
-                            <page string="descripcio">
+                            <page string="Descripció">
                                 <group>
                                     <field name="description"></field>
                                 </group>

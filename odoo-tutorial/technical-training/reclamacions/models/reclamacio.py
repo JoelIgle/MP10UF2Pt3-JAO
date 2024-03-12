@@ -14,4 +14,11 @@ class Reclamacio(models.Model):
     modification_date = fields.Date('Data de modificació', copy=False, default=lambda self: datetime.today().date())
     closing_date = fields.Date('Data de tancament', copy=False, default=lambda self: datetime.today().date())
     
+    MOTIUS_TANCAMENT = [
+        ('resolt', 'Resolt'),
+        ('cancel·lat', 'Cancel·lat'),
+        ('altre', 'Altres'),
+    ]
 
+    # Camp per al motiu de tancament o cancel·lació
+    reason_for_closing = fields.Selection(MOTIUS_TANCAMENT, string='Motiu de Tancament o Cancel·lació')

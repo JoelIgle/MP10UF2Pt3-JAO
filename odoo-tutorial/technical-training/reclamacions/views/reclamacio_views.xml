@@ -22,6 +22,9 @@
                         <group>
                             <field name="client_id"></field>
                         </group>
+                        <group>
+                            <field name="reason_for_closing"></field>
+                        </group>
                         <notebook>
                             <page string="descripcio">
                                 <group>

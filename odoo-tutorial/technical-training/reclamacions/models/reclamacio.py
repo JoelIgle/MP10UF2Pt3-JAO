@@ -6,14 +6,13 @@ class Reclamacio(models.Model):
     name = fields.Char('Nom', required=True)
     client_id = fields.Many2one('res.partner', string='Client que reclama', required=True)
     creator_id = fields.Many2one('res.users', string='Usuari que crea reclamació', readonly=True, default=lambda self: self.env.user.id)
-    # order_id = fields.Many2one('sale.order', string='Comanda de vendes asociada')
+    sales_order_id = fields.Many2one('sale.order', string='Comanda de vendes asociada')
     closing_date = fields.Date('Data de tancament', copy=False, default=lambda self: datetime.today().date())
     tancament = fields.Selection([
         ('resolt', 'Resolt'),
         ('cancel·lat', 'Cancel·lat'),
         ('altre', 'Altres')
         ], string='Motiu de Tancament o Cancel·lació')
-    description = fields.Text('Descripció')
     missatges = fields.One2many('missatge', 'reclamacio_id', string='Missatges')
 
     # Aquí afegeix Aleix
@@ -34,7 +33,8 @@ class Reclamacio(models.Model):
     # Aquí acaba el d'Aleix
 
     # Aquí afegeix Joel
-
+    initial_description = fields.Text('Descripció inicial de la reclamació')
+    final_description = fields.Text('Una descripció de la resolució final de la reclamació')
 
     # Aquí acaba el de Joel
 

@@ -7,61 +7,68 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-<!--    <record id="view_reclamacio_form" model="ir.ui.view">-->
-<!--        <field name="name">reclamacio.form</field>-->
-<!--        <field name="model">reclamacio</field>-->
-<!--        <field name="arch" type="xml">-->
-<!--            <form string="Reclamacions">-->
-<!--                <sheet>-->
-<!--                    <h1>-->
-<!--                        <group>-->
-<!--                            <field name="name"/>-->
-<!--                        </group>-->
-<!--                    </h1>-->
-<!--                    <group>-->
-<!--                        <group>-->
-<!--                            <field name="client_id"/>-->
-<!--                        </group>-->
-<!--                        <group>-->
-<!--                            <field name="creator_id"/>-->
-<!--                        </group>-->
-<!--                        <group>-->
-<!--                            <field name="creation_date"/>-->
-<!--                        </group>-->
-<!--                        <group>-->
-<!--                            <field name="modification_date"/>-->
-<!--                        </group>-->
-<!--                        <group>-->
-<!--                            <field name="closing_date"/>-->
-<!--                        </group>-->
-<!--                        <group>-->
-<!--                            <field name="sales_order_id"/>-->
-<!--                        </group>-->
-<!--                        <group>-->
-<!--                            <field name="tancament"/>-->
-<!--                        </group>-->
-<!--                        <group>-->
-<!--                            <field name="estat"/>-->
-<!--                        </group>-->
+    <record id="missatge_action" model="ir.actions.act_window">
+        <field name="name">Missatge</field>
+        <field name="name">MIssatges</field>
+        <field name="res_model">missatge</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 
-<!--                        <notebook>-->
-<!--                            <page string="Descripció inicial">-->
-<!--                                <group>-->
-<!--                                    <field name="initial_description"/>-->
-<!--                                </group>-->
-<!--                            </page>-->
-<!--                            <page string="Descripció de la resolució final">-->
-<!--                                <group>-->
-<!--                                    <field name="final_description"/>-->
-<!--                                </group>-->
-<!--                            </page>-->
-<!--                        </notebook>-->
+   <record id="view_reclamacio_form" model="ir.ui.view">
+       <field name="name">reclamacio.form</field>
+       <field name="model">reclamacio</field>
+       <field name="arch" type="xml">
+           <form string="Reclamacions">
+               <sheet>
+                   <h1>
+                       <group>
+                           <field name="name"/>
+                       </group>
+                   </h1>
+                   <group>
+                       <group>
+                           <field name="client_id"/>
+                       </group>
+                       <group>
+                           <field name="creator_id"/>
+                       </group>
+                       <group>
+                           <field name="create_date">Data de creació</field>
+                       </group>
+                       <group>
+                           <field name="write_date">Data de modificació</field>
+                       </group>
+                       <group>
+                           <field name="closing_date"/>
+                       </group>
+                       <group>
+                           <field name="sales_order_id"/>
+                       </group>
+                       <group>
+                           <field name="tancament"/>
+                       </group>
+                       <group>
+                           <field name="estat"/>
+                       </group>
 
-<!--                    </group>-->
-<!--                </sheet>-->
-<!--            </form>-->
+                       <notebook>
+                           <page string="Descripció inicial">
+                               <group>
+                                   <field name="initial_description"/>
+                               </group>
+                           </page>
+                           <page string="Descripció de la resolució final">
+                               <group>
+                                   <field name="final_description"/>
+                               </group>
+                           </page>
+                       </notebook>
 
-<!--        </field>-->
-<!--    </record>-->
+                   </group>
+               </sheet>
+           </form>
+
+       </field>
+   </record>
 
 </odoo>

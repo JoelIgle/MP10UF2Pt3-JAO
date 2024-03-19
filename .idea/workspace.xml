@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28cc5ee3-1300-4529-bba0-39e37b8005b5" name="Changes" comment="" />
+    <list default="true" id="28cc5ee3-1300-4529-bba0-39e37b8005b5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo-tutorial/technical-training/reclamacions/models/reclamacio.py" beforeDir="false" afterPath="$PROJECT_DIR$/odoo-tutorial/technical-training/reclamacions/models/reclamacio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo-tutorial/technical-training/reclamacions/views/reclamacio_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/odoo-tutorial/technical-training/reclamacions/views/reclamacio_views.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,20 +29,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Joel",
-    "last_opened_file_path": "/home/alumne/Escriptori/MP_10/UF2/MP10UF2Pt3-JAO",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Joel&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alumne/Escriptori/MP_10/UF2/MP10UF2Pt3-JAO&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -51,6 +56,11 @@
       <workItem from="1710253075999" duration="246000" />
       <workItem from="1710253352276" duration="231000" />
       <workItem from="1710253598919" duration="1851000" />
+      <workItem from="1710517511951" duration="2000" />
+      <workItem from="1710746530025" duration="215000" />
+      <workItem from="1710774250799" duration="29000" />
+      <workItem from="1710786407065" duration="21000" />
+      <workItem from="1710857256155" duration="984000" />
     </task>
     <servers />
   </component>

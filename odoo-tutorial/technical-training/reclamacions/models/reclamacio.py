@@ -13,16 +13,22 @@ class Reclamacio(models.Model):
         ('cancel·lat', 'Cancel·lat'),
         ('altre', 'Altres')
         ], string='Motiu de Tancament o Cancel·lació')
-
+    missatges = fields.One2many('missatge', 'reclamacio_id', string='Missatges')
 
     # Aquí afegeix Aleix
 
     estat = fields.Selection([('New','Nova'), ('In treatment', 'En tractament'), ('Closed', 'Tancada'), ('Canceled', 'Cancel·lada'), ],default='New')
 
     @api.onchange('estat')
-    def canvi_estat(self):
+    def tanco_estat(self):
         if self.estat == 'Closed':
             self.closing_date = datetime.today().date()
+
+    @api.onchange('missatges')
+    def canvi_estat(self):
+        if self.missatges.__len__()>=1:
+            self.estat == 'In treatment'
+    
 
     # Aquí acaba el d'Aleix
 

@@ -4,6 +4,7 @@ class Missatge(models.Model):
     creator_id = fields.Many2one('res.partner', string='Creador missatge', required=True)
     message_body = fields.Text('Missatge')
     finished = fields.Boolean("Acabat", default=False)
+    reclamacio_id = fields.Many2one('reclamacio', "Reclamacio")
 
 @api.onchange('finished')
 def _canvi_finished(self):

@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <odoo>
-<record id="reclamacio_action" model="ir.actions.act_window">
-<field name="name">Reclamacio</field>
-<field name="name">Reclamacions</field>
-<field name="res_model">reclamacio</field>
-<field name="view_mode">tree,form</field>
-</record>
+    <record id="reclamacio_action" model="ir.actions.act_window">
+        <field name="name">Reclamacio</field>
+        <field name="name">Reclamacions</field>
+        <field name="res_model">reclamacio</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 
 <!--    <record id="view_reclamacio_form" model="ir.ui.view">-->
 <!--        <field name="name">reclamacio.form</field>-->
@@ -34,14 +34,25 @@
 <!--                        <group>-->
 <!--                            <field name="closing_date"/>-->
 <!--                        </group>-->
-<!--&lt;!&ndash;                        <group>&ndash;&gt;-->
-<!--&lt;!&ndash;                            <field name="order_id"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                        </group>&ndash;&gt;-->
+<!--                        <group>-->
+<!--                            <field name="sales_order_id"/>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="tancament"/>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="estat"/>-->
+<!--                        </group>-->
 
 <!--                        <notebook>-->
-<!--                            <page string="Descripció">-->
+<!--                            <page string="Descripció inicial">-->
 <!--                                <group>-->
-<!--                                    <field name="description"/>-->
+<!--                                    <field name="initial_description"/>-->
+<!--                                </group>-->
+<!--                            </page>-->
+<!--                            <page string="Descripció de la resolució final">-->
+<!--                                <group>-->
+<!--                                    <field name="final_description"/>-->
 <!--                                </group>-->
 <!--                            </page>-->
 <!--                        </notebook>-->

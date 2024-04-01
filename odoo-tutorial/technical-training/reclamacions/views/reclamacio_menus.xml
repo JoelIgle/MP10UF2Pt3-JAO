@@ -7,7 +7,8 @@
     </menuitem>
     <menuitem id="reclamacions_config_menu" name="Altres Opcions">
         <menuitem id="reclamacio_motiu_action" action="motiu_action"/>
-       
+        <menuitem id="reclamacio_missatge_action" action="missatge_action"/>
     </menuitem>
+    
 </menuitem>
 </odoo>

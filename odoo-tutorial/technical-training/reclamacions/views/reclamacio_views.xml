@@ -13,13 +13,21 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <record id="missatge_action" model="ir.actions.act_window">
+        <field name="name">Missatges</field>
+        <field name="res_model">missatge</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
    <record id="view_reclamacio_form" model="ir.ui.view">
         <field name="name">reclamacio.form</field>
        <field name="model">reclamacio</field>
        <field name="arch" type="xml">
            <form string="Reclamacions">
                <sheet>
+                
                 <group>
+                    
                     <field name="name"/>
                     <field name="client_id"/>
                     <field name="creator_id"/>
@@ -27,6 +35,7 @@
                     <field name="sales_order_id"/>
                     <field name="tancament_id"/>
                     <field name="estat"/>
+                    
                 </group>
                 <notebook>
                     <page string="Descripció inicial">
@@ -40,14 +49,25 @@
                         </group>
                     </page>
                     <page string="Missatges">
-                        <group>
-                            <field name="missatges" widget="one2many"/>
-                        </group>
+                        <field name="missatges">
+                            <tree>
+                                <field name="name"/>
+                                <field name="creator_id"/>
+                                <field name="reclamacio_id"/>
+                            </tree>
+                            <form string="Missatges">
+                                <group>
+                                    <field name="name"/>
+                                    <field name="creator_id"/>
+                                    <field name="reclamacio_id"/>
+                                </group>
+                            </form>
+                        </field>
                     </page>
                 </notebook>
                </sheet>
+            
            </form>
        </field>
     </record>
-
 </odoo>

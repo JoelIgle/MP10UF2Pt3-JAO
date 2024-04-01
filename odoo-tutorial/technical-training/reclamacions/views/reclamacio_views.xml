@@ -7,61 +7,47 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-<!--    <record id="view_reclamacio_form" model="ir.ui.view">-->
-<!--        <field name="name">reclamacio.form</field>-->
-<!--        <field name="model">reclamacio</field>-->
-<!--        <field name="arch" type="xml">-->
-<!--            <form string="Reclamacions">-->
-<!--                <sheet>-->
-<!--                    <h1>-->
-<!--                        <group>-->
-<!--                            <field name="name"/>-->
-<!--                        </group>-->
-<!--                    </h1>-->
-<!--                    <group>-->
-<!--                        <group>-->
-<!--                            <field name="client_id"/>-->
-<!--                        </group>-->
-<!--                        <group>-->
-<!--                            <field name="creator_id"/>-->
-<!--                        </group>-->
-<!--                        <group>-->
-<!--                            <field name="creation_date"/>-->
-<!--                        </group>-->
-<!--                        <group>-->
-<!--                            <field name="modification_date"/>-->
-<!--                        </group>-->
-<!--                        <group>-->
-<!--                            <field name="closing_date"/>-->
-<!--                        </group>-->
-<!--                        <group>-->
-<!--                            <field name="sales_order_id"/>-->
-<!--                        </group>-->
-<!--                        <group>-->
-<!--                            <field name="tancament"/>-->
-<!--                        </group>-->
-<!--                        <group>-->
-<!--                            <field name="estat"/>-->
-<!--                        </group>-->
+    <record id="motiu_action" model="ir.actions.act_window">
+        <field name="name">Motiu tancament</field>
+        <field name="res_model">tancament</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 
-<!--                        <notebook>-->
-<!--                            <page string="Descripció inicial">-->
-<!--                                <group>-->
-<!--                                    <field name="initial_description"/>-->
-<!--                                </group>-->
-<!--                            </page>-->
-<!--                            <page string="Descripció de la resolució final">-->
-<!--                                <group>-->
-<!--                                    <field name="final_description"/>-->
-<!--                                </group>-->
-<!--                            </page>-->
-<!--                        </notebook>-->
-
-<!--                    </group>-->
-<!--                </sheet>-->
-<!--            </form>-->
-
-<!--        </field>-->
-<!--    </record>-->
+   <record id="view_reclamacio_form" model="ir.ui.view">
+        <field name="name">reclamacio.form</field>
+       <field name="model">reclamacio</field>
+       <field name="arch" type="xml">
+           <form string="Reclamacions">
+               <sheet>
+                <group>
+                    <field name="name"/>
+                    <field name="client_id"/>
+                    <field name="creator_id"/>
+                    <field name="closing_date"/>
+                    <field name="sales_order_id"/>
+                    <field name="tancament_id"/>
+                    <field name="estat"/>
+                </group>
+                <notebook>
+                    <page string="Descripció inicial">
+                        <group>
+                            <field name="initial_description"/>
+                        </group>
+                    </page>
+                    <page string="Descripció de la resolució final">
+                        <group>
+                            <field name="final_description"/>
+                        </group>
+                    </page>
+                    <page string="Missatges">
+                        <group>
+                            <field name="missatges" widget="one2many"/>
+                        </group>
+                    </page>
+                </notebook>
+               </sheet>
+           </form>
+       </field>
+    </record>
 
 </odoo>

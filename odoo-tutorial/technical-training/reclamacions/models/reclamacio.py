@@ -8,11 +8,7 @@ class Reclamacio(models.Model):
     creator_id = fields.Many2one('res.users', string='Usuari que crea reclamació', readonly=True, default=lambda self: self.env.user.id)
     sales_order_id = fields.Many2one('sale.order', string='Comanda de vendes asociada')
     closing_date = fields.Date('Data de tancament', copy=False, default=lambda self: datetime.today().date())
-    tancament = fields.Selection([
-        ('resolt', 'Resolt'),
-        ('cancel·lat', 'Cancel·lat'),
-        ('altre', 'Altres')
-        ], string='Motiu de Tancament o Cancel·lació')
+    tancament_id = fields.Many2one('tancament', string='Motiu de Tancament o Cancel·lació')
     missatges = fields.One2many('missatge', 'reclamacio_id', string='Missatges')
 
     # Aquí afegeix Aleix
@@ -39,7 +35,19 @@ class Reclamacio(models.Model):
     # Aquí acaba el de Joel
 
     # Aquí afegeix Oriol
+    def _create_default_tancament_records(self):
+        Tancament = self.env['tancament']
+        default_values = [
+            ('Resolt'),
+            ('Cancel·lat'),
+            ('Altres')
+        ]
+        for value in default_values:
+            Tancament.create({'name': value})
 
+    # Sobrescribir el método 'init' para crear registros predeterminados en la instalación del módulo
+    def init(self):
+        self._create_default_tancament_records()
 
 
     # Aquí acaba el d'Oriol

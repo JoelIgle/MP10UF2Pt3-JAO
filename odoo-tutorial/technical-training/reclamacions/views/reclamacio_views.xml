@@ -7,6 +7,23 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+<!-- Aixó és lo que se veu al entrar, la llista de propietats-->
+    <record id="reclamacio_tree" model="ir.ui.view">
+        <field name="name">reclamacio.tree</field>
+        <field name="model">reclamacio</field>
+        <field name="arch" type="xml">
+            <tree string="Propietat Immo">
+                <field name="name"/>
+                <field name="client_id"/>
+                <field name="creator_id" />
+                <field name="sales_order_id" />
+                <field name="closing_date" />
+                <field name="tancament_id"/>
+                <field name="missatges"/>
+                <field name="estat"/>
+            </tree>
+        </field>
+    </record>
     <record id="motiu_action" model="ir.actions.act_window">
         <field name="name">Motiu tancament</field>
         <field name="res_model">tancament</field>

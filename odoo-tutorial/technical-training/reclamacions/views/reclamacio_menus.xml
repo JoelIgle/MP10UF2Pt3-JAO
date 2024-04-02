@@ -3,6 +3,12 @@
 <menuitem id="reclamacions_menu_root" name="Reclamacions">
     <menuitem id="reclamacions_first_level_menu" name="Reclamacions">
         <menuitem id="reclamacio_menu_action" action="reclamacio_action"/>
+       
     </menuitem>
+    <menuitem id="reclamacions_config_menu" name="Altres Opcions">
+        <menuitem id="reclamacio_motiu_action" action="motiu_action"/>
+        <menuitem id="reclamacio_missatge_action" action="missatge_action"/>
+    </menuitem>
+    
 </menuitem>
 </odoo>
